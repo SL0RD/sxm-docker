@@ -23,4 +23,4 @@ else
     echo "Running HLS proxy..."
 fi
 
-sxm-player
+sxm-player --region CA
