@@ -20,6 +20,9 @@ ARG SXM_PLAYER_PLUGINS="sxm-discord==0.2.5"
 RUN pip install --no-cache-dir -U pip \
     && pip install --no-cache-dir $SXM $SXM_PLAYER $SXM_PLAYER_PLUGINS
 
+COPY ./cli.py /usr/local/lib/python3.9/site-packages/sxm/cli.py
+COPY ./client.py /usr/local/lib/python3.9/site-packages/sxm/client.py
+
 COPY ./start.sh /start.sh
 RUN chmod +x /start.sh
 
